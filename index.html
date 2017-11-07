@@ -5,12 +5,16 @@
 
 <head>
     <title>Simple Crystal Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
 
 </head>
 
 <body>
+
+
 
     <h1 class="text-center" id="Goal">Target Score:</h1>
 
@@ -20,23 +24,52 @@
 
     <h2 class="text-center" id="Score">Score:</h2>
 
-    <p>Each crystal has an associated value which will be hidden from you until you click. Once the page is loaded, the "Target Score" at the top of the page is the value you are trying to reach! If you can click a combination of crystals to reach the target,
-        you have won the game! If you exceed the target score, a loss will register. </p>
 
-    <p>You have an unlimited amount of guesses to reach the target value. Let's collect some crystals!</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Each crystal has an associated value which will be hidden from you until you click. Once the page is loaded, the "Target Score" at the top of the page is the value you are trying to reach! If you can click a combination of crystals to
+                    reach the target, you have won the game! If you exceed the target score, a loss will register. </p>
+
+                <p>You have an unlimited amount of guesses to reach the target value. Let's collect some crystals!</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 
     <!--Add in Crystal images and size appropriately-->
 
 
+    <div class="container">
+        <div class="row">
 
-    <img class="crystal-image1" id="crystal" src="assets/images/Crystal1.jpg" height="100px" width="100px">
-    <img class="crystal-image2" id="crystal" src="assets/images/Crystal2.jpg" alt="crystals" height="100px" width="100px">
+            <div class="col-md-3">
+                <img class="crystal-image1" id="crystal" src="assets/images/Crystal1.jpg" height="100px" width="100px">
+            </div>
 
-    <img class="crystal-image3" id="crystal" src="assets/images/Crystal3.jpg" alt="crystals" height="100px" width="100px">
+            <div class="col-md-3">
+                <img class="crystal-image2" id="crystal" src="assets/images/Crystal2.jpg" alt="crystals" height="100px" width="100px">
+            </div>
 
-    <img class="crystal-image4" id="crystal" src="assets/images/Crystal4.jpg" alt="crystals" height="100px" width="100px">
+            <div class="col-md-3">
+                <img class="crystal-image3" id="crystal" src="assets/images/Crystal3.jpg" alt="crystals" height="100px" width="100px">
+            </div>
 
+            <div class="col-md-3">
+                <img class="crystal-image4" id="crystal" src="assets/images/Crystal4.jpg" alt="crystals" height="100px" width="100px">
+            </div>
+
+        </div>
+        <!--Row-->
+
+    </div>
+    <!--Container-->
 
 
 
