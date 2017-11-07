@@ -1,0 +1,17 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}

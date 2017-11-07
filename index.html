@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-us">
+<meta charset="UTF-8">
+
+<head>
+    <title>Simple Crystal Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <h1 class="text-center" id="Goal">Target Score:</h1>
+
+    <h2 class="text-center" id="Wins">Wins:</h2>
+
+    <h2 class="text-center" id="Losses">Losses:</h2>
+
+    <h2 class="text-center" id="Score">Score:</h2>
+
+    <!--Add in Crystal images and size appropriately-->
+
+
+
+    <img class="crystal-image1" id="crystal" src="assets/images/Crystal1.jpg" height="100px" width="100px">
+    <img class="crystal-image2" id="crystal" src="assets/images/Crystal2.jpg" alt="crystals" height="100px" width="100px">
+
+    <img class="crystal-image3" id="crystal" src="assets/images/Crystal3.jpg" alt="crystals" height="100px" width="100px">
+
+    <img class="crystal-image4" id="crystal" src="assets/images/Crystal4.jpg" alt="crystals" height="100px" width="100px">
+
+
+
+
+    <!--Add JQuery Library-->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var Wins = 1;
+        var Losses = 0;
+        var Score = 0;
+
+
+        //Add array for random number generator for user to attempt to guess		
+
+        var targetScore = Math.floor(Math.random() * 101) + 19;
+
+        $("#Goal").text("Target Score: " + targetScore);
+
+
+
+
+
+
+        //Add an on click event to respond when crystal image is clicked. You need a different counter for each crystal image. Counters should be created as separate variables.
+
+        var crystalValue1 = Math.floor(Math.random() * 11) + 1;
+        $(".crystal-image1").on("click", function() {
+            Score += crystalValue1;
+            console.log(Score);
+            $("#Score").text("Score: " + Score);
+
+
+            //Created a simple alert to verify functionality
+            console.log("Crystal 1 is worth " + crystalValue1 + " points!");
+
+            if (Score === targetScore) {
+                console.log("Winner")
+                $("#Wins").text("Wins: " + Wins++);
+
+                targetScore = Math.floor(Math.random() * 101) + 19;
+                $("#Goal").text("Target Score: " + targetScore);
+                Score = 0;
+            }
+            else if (Score > targetScore) {
+                Losses++;
+                $("#Losses").text("Losses: " + Losses++);
+
+                targetScore = Math.floor(Math.random() * 101) + 19;
+                $("#Goal").text("Target Score: " + targetScore);
+                Score = 0;
+            }
+
+
+
+        });
+
+        var crystalValue2 = Math.floor(Math.random() * 11) + 1;;
+        $(".crystal-image2").on("click", function() {
+            Score += crystalValue2;
+            console.log(Score);
+            $("#Score").text("Score: " + Score);
+
+
+            //Created a simple alert to verify functionality
+            console.log("Crystal 2 is worth " + crystalValue2 + " points!");
+
+            if (Score === targetScore) {
+                console.log("Winner")
+                $("#Wins").text("Wins: " + Wins++);
+            }
+            else if (Score > targetScore) {
+                Losses++;
+                $("#Losses").text("Losses: " + Losses++);
+                targetScore = Math.floor(Math.random() * 101) + 19;
+                // you had it right... one tiny typo
+                $("#Goal").text("Target Score: " + targetScore);
+                Score = 0;
+            }
+
+
+
+        });
+
+        var crystalValue3 = Math.floor(Math.random() * 11) + 1;;
+        $(".crystal-image3").on("click", function() {
+            Score += crystalValue3;
+            console.log(Score);
+            $("#Score").text("Score: " + Score);
+
+
+            //Created a simple alert to verify functionality
+            console.log("Crystal 3 is worth " + crystalValue3 + " points!");
+
+            if (Score === targetScore) {
+                console.log("Winner")
+                $("#Wins").text("Wins: " + Wins++);
+            }
+            else if (Score > targetScore) {
+                Losses++;
+                $("#Losses").text("Losses: " + Losses++);
+                targetScore = Math.floor(Math.random() * 101) + 19;
+                // you had it right... one tiny typo
+                $("#Goal").text("Target Score: " + targetScore);
+                Score = 0;
+            }
+
+
+
+        });
+
+        var crystalValue4 = Math.floor(Math.random() * 11) + 1;;
+        $(".crystal-image4").on("click", function() {
+            Score += crystalValue4;
+            console.log(Score);
+            $("#Score").text("Score: " + Score);
+
+
+            //Created a simple alert to verify functionality
+            console.log("Crystal 4 is worth " + crystalValue4 + " points!");
+
+            if (Score === targetScore) {
+                console.log("Winner")
+                $("#Wins").text("Wins: " + Wins++);
+            }
+            else if (Score > targetScore) {
+                Losses++;
+                $("#Losses").text("Losses: " + Losses++);
+                targetScore = Math.floor(Math.random() * 101) + 19;
+                // you had it right... one tiny typo
+                $("#Goal").text("Target Score: " + targetScore);
+                Score = 0;
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>
